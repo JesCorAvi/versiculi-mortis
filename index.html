@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versiculi Mortis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Versiculi Mortis</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="#synopsis" class="nav-link" data-i18n="nav.story">Historia</a>
+                <a href="#characters" class="nav-link" data-i18n="nav.characters">Personajes</a>
+                <a href="#world" class="nav-link" data-i18n="nav.world">Mundo</a>
+                <!-- Updated language selector with slider -->
+                <div class="language-selector">
+                    <div class="lang-slider"></div>
+                    <button class="lang-btn active" data-lang="es" title="Español">ES</button>
+                    <button class="lang-btn" data-lang="en" title="English">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Added content-wrapper for fade animation -->
+    <div class="content-wrapper">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-titles">
+                    <h2 class="main-title">Versiculi Mortis</h2>
+                </div>
+                <p class="subtitle" data-i18n="hero.subtitle">Una novela interactiva basada en el mundo de Anima: Beyond Fantasy</p>
+                <p class="hero-tagline" data-i18n="hero.tagline">"La vida y la muerte son conceptos vagos de la misma moneda"</p>
+                <div class="cta-buttons">
+                    <a href="https://jescoravi.itch.io/versiculi-mortis" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="playBtn">
+                        <span data-i18n="hero.play">Jugar Ahora</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <button class="btn btn-secondary" onclick="document.getElementById('synopsis').scrollIntoView({behavior: 'smooth'})">
+                        <span data-i18n="hero.discover">Descubrir Más</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="rune-circle"></div>
+            </div>
+        </section>
+
+        <section id="synopsis" class="synopsis">
+            <div class="container">
+                <h2 class="section-title" data-i18n="synopsis.title">Una Historia de Sombras</h2>
+                <div class="synopsis-content">
+                    <div class="synopsis-text">
+                        <p class="lead" data-i18n="synopsis.lead">En el mundo de Gaïa, la humanidad vive en un olvido forzado. La historia fue purgada, la magia declarada herejía, y el conocimiento prohibido.</p>
+                        <p data-i18n="synopsis.p1">Emma Bianchi era una niña brillante con un futuro prometedor. Hasta la noche en que todo se tiñó de rojo.</p>
+                        <p data-i18n="synopsis.p2">Cuando la muerte le arrebató todo lo que amaba, Emma descubrió un poder prohibido: la nigromancia. Ahora debe decidir entre aceptar el orden natural... o lanzar la moneda al aire.</p>
+                        <div class="warning-box">
+                            <div class="warning-icon">!</div>
+                            <p><strong data-i18n="synopsis.warning.title">Advertencia:</strong> <span data-i18n="synopsis.warning.text">Esta historia interactiva contiene temas oscuros, violencia y muerte.</span></p>
+                        </div>
+                    </div>
+                    <div class="synopsis-features">
+                        <div class="feature-card">
+                            <h3 data-i18n="features.branching.title">Historia Ramificada</h3>
+                            <p data-i18n="features.branching.desc">Tus decisiones moldean el destino de Emma y definen su camino entre la luz y la oscuridad</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="features.dark.title">Fantasía Oscura</h3>
+                            <p data-i18n="features.dark.desc">Explora un mundo de magia prohibida, secretos ancestrales y poderes que desafían la muerte</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3 data-i18n="features.endings.title">Múltiples Finales</h3>
+                            <p data-i18n="features.endings.desc">Cada elección cuenta. Descubre los diferentes destinos que aguardan a Emma Bianchi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="characters">
+            <div class="container">
+                <h2 class="section-title" data-i18n="characters.title">Personajes</h2>
+                <div class="characters-grid">
+                    <div class="character-card" data-character="emma">
+                        <div class="character-image">
+                            <div class="char-placeholder">E</div>
+                        </div>
+                        <h3>Emma Bianchi</h3>
+                        <p class="character-role" data-i18n="characters.emma.role">Protagonista</p>
+                        <p class="character-desc" data-i18n="characters.emma.desc">Una niña brillante cuyo mundo se derrumbó en una sola noche. Ahora debe elegir entre aceptar la muerte... o desafiarla.</p>
+                    </div>
+                    
+                    <div class="character-card" data-character="lorenzo">
+                        <div class="character-image">
+                            <div class="char-placeholder">L</div>
+                        </div>
+                        <h3>Lorenzo Bianchi</h3>
+                        <p class="character-role" data-i18n="characters.lorenzo.role">Hermano Mayor</p>
+                        <p class="character-desc" data-i18n="characters.lorenzo.desc">Carismático y protector, Lorenzo era el pilar de confianza de Emma. Su destino cambió todo.</p>
+                    </div>
+                    
+                    <div class="character-card" data-character="balthassar">
+                        <div class="character-image">
+                            <div class="char-placeholder">B</div>
+                        </div>
+                        <h3>Balthassar</h3>
+                        <p class="character-role" data-i18n="characters.balthassar.role">El Mentor</p>
+                        <p class="character-desc" data-i18n="characters.balthassar.desc">Una figura misteriosa en armadura. Científico, mentor... ¿o algo más oscuro?</p>
+                    </div>
+                    
+                    <div class="character-card" data-character="voice">
+                        <div class="character-image">
+                            <div class="char-placeholder">?</div>
+                        </div>
+                        <h3 data-i18n="characters.voice.name">La Voz</h3>
+                        <p class="character-role" data-i18n="characters.voice.role">Narrador Enigmático</p>
+                        <p class="character-desc" data-i18n="characters.voice.desc">Antigua y familiar, la voz que guía tu viaje a través de la oscuridad. ¿Quién es realmente?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="world" class="world">
+            <div class="container">
+                <h2 class="section-title" data-i18n="world.title">El Mundo de Gaïa</h2>
+                <div class="world-content">
+                    <div class="world-item">
+                        <h3 data-i18n="world.forgotten.title">Un Mundo en Olvido</h3>
+                        <p data-i18n="world.forgotten.desc">Gaïa es un mundo atrapado en la ignorancia. Un terrible conflicto del pasado borró la memoria de la humanidad, y el Imperio declaró que todo conocimiento oculto es herejía.</p>
+                    </div>
+                    <div class="world-item">
+                        <h3 data-i18n="world.magic.title">Magia Prohibida</h3>
+                        <p data-i18n="world.magic.desc">Tres formas de poder sobreviven en las sombras: la manipulación de la realidad por conocimiento, el control de la energía vital y los poderes de la mente. Todos perseguidos por la Inquisición.</p>
+                    </div>
+                    <div class="world-item">
+                        <h3 data-i18n="world.necromancy.title">La Nigromancia</h3>
+                        <p data-i18n="world.necromancy.desc">El poder más temido de todos. La capacidad de desafiar la muerte misma y manipular la frontera entre la vida y el más allá.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="footer.title">Versiculi Mortis</h4>
+                    <p data-i18n="footer.subtitle">Una historia interactiva de fantasía oscura</p>
+                    <div class="social-links">
+                        <a href="https://jescoravi.itch.io/versiculi-mortis" target="_blank" rel="noopener noreferrer" class="social-link" title="Jugar en itch.io">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.4-1.102 2.4-2.41 0 1.308 1.137 2.41 2.466 2.41h.002c1.33 0 2.467-1.102 2.467-2.41 0 1.308 1.034 2.41 2.435 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.283 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612C18.775.34 17.093 0 17.093 0s-3.187 1.085-5.093 1.085c-1.906 0-5.093-1.085-5.093-1.085S5.225.34 3.13 1.338zm14.424 12.088s-.08.63-.676 1.03c-.596.4-2.696 1.168-4.875 1.168-2.18 0-4.28-.768-4.875-1.168-.596-.4-.676-1.03-.676-1.03-.118-.87-.176-1.88-.176-2.968 0-.928.295-1.648.295-1.648s.062 2.103 1.442 2.103c.525 0 .945-.257 1.146-.772.2.515.62.772 1.145.772s.945-.257 1.145-.772c.2.515.62.772 1.146.772 1.38 0 1.442-2.103 1.442-2.103s.295.72.295 1.648c0 1.088-.058 2.098-.176 2.968zm-7.424 5.85c0 1.32-.516 2.4-1.152 2.4-.636 0-1.152-1.08-1.152-2.4 0-1.32.516-2.4 1.152-2.4.636 0 1.152 1.08 1.152 2.4zm5 0c0 1.32-.516 2.4-1.152 2.4-.636 0-1.152-1.08-1.152-2.4 0-1.32.516-2.4 1.152-2.4.636 0 1.152 1.08 1.152 2.4z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/JesCorAvi" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://jescoravi.itch.io/" target="_blank" rel="noopener noreferrer" class="social-link" title="Perfil de itch.io">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <text x="12" y="16" text-anchor="middle" font-size="12" font-weight="bold" fill="var(--bg-darker)">JC</text>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.content">Contenido</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#synopsis" data-i18n="nav.story">Historia</a></li>
+                        <li><a href="#characters" data-i18n="nav.characters">Personajes</a></li>
+                        <li><a href="#world" data-i18n="nav.world">Mundo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.play.title">Juega Ahora</h4>
+                    <p style="margin-bottom: 1rem;" data-i18n="footer.play.available">Disponible gratuitamente en itch.io</p>
+                    <a href="https://jescoravi.itch.io/versiculi-mortis" target="_blank" rel="noopener noreferrer" class="footer-play-btn" data-i18n="footer.play.button">
+                        Jugar en itch.io
+                    </a>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem;"><strong data-i18n="footer.warning.title">Advertencia:</strong> <span data-i18n="footer.warning.text">Contiene temas maduros incluyendo violencia, muerte y contenido oscuro.</span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 Versiculi Mortis - Desarrollado por <a href="https://github.com/JesCorAvi" target="_blank" rel="noopener noreferrer" style="color: var(--accent-green); text-decoration: none;">JesCorAvi</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
